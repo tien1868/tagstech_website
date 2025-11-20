@@ -1,8 +1,46 @@
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2C5F5D]/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            <a href="/" className="flex items-center gap-3 group">
+              <img
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                className="w-14 h-14 drop-shadow-lg group-hover:scale-105 transition-transform"
+              />
+              <div className="hidden sm:block">
+                <div className="text-xl font-bold text-white letterpress">TAGS</div>
+                <div className="text-xs text-[#A67C52] font-semibold tracking-wide">
+                  TEXTILE ANALYSIS & GARMENT SCANNING
+                </div>
+              </div>
+            </a>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-block text-white/90 hover:text-white font-semibold transition-colors"
+              >
+                Watch Demo
+              </a>
+              <a
+                href="#pilot"
+                className="inline-block bg-[#A67C52] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#8d6943] transition-all shadow-lg hover:shadow-xl distressed-border"
+                style={{ borderColor: 'rgba(255,255,255,0.2)' }}
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="canvas-texture relative bg-[#2C5F5D] text-white overflow-hidden">
+      <section className="canvas-texture relative bg-[#2C5F5D] text-white overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255,255,255,0.03) 50px, rgba(255,255,255,0.03) 51px)'

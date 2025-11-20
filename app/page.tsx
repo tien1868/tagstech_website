@@ -246,7 +246,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl mb-6 text-[#2C5F5D] letterpress">
-            Pilot Programs Starting Q1 2025
+            Pilot Programs Starting Spring 2026
           </h2>
           <p className="text-xl text-gray-700 mb-8">
             Follow our journey on Instagram

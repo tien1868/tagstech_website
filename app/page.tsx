@@ -1,24 +1,48 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function Home() {
-  const [employees, setEmployees] = useState(2);
-  const [wage, setWage] = useState(15);
-  const [itemsPerDay, setItemsPerDay] = useState(100);
-
-  // ROI Calculator logic
-  const timePerItem = 5; // minutes manual
-  const timePerItemTAGS = 0.33; // 20 seconds
-  const timeSaved = (itemsPerDay * (timePerItem - timePerItemTAGS)) / 60; // hours per day
-  const monthlySavings = timeSaved * wage * 22 * employees;
-  const additionalCapacity = Math.floor(itemsPerDay * (timePerItem / timePerItemTAGS));
-  const roiMonths = (99 / monthlySavings) * 12;
-
   return (
     <main className="min-h-screen">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2C5F5D]/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            <a href="/" className="flex items-center gap-3 group">
+              <img
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                className="w-14 h-14 drop-shadow-lg group-hover:scale-105 transition-transform"
+              />
+              <div className="hidden sm:block">
+                <div className="text-xl font-bold text-white letterpress">TAGS</div>
+                <div className="text-xs text-[#A67C52] font-semibold tracking-wide">
+                  TEXTILE ANALYSIS & GARMENT SCANNING
+                </div>
+              </div>
+            </a>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-block text-white/90 hover:text-white font-semibold transition-colors"
+              >
+                Watch Demo
+              </a>
+              <a
+                href="#pilot"
+                className="inline-block bg-[#A67C52] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#8d6943] transition-all shadow-lg hover:shadow-xl distressed-border"
+                style={{ borderColor: 'rgba(255,255,255,0.2)' }}
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="canvas-texture relative bg-[#2C5F5D] text-white overflow-hidden">
+      <section className="canvas-texture relative bg-[#2C5F5D] text-white overflow-hidden pt-20">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255,255,255,0.03) 50px, rgba(255,255,255,0.03) 51px)'
@@ -27,32 +51,35 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-8 inline-block">
-              <div className="w-20 h-20 mx-auto bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
-                <svg className="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
+            <div className="mb-8 inline-block vintage-stamp">
+              <img
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto drop-shadow-2xl"
+              />
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 letterpress tracking-wide">
-              Process Thrift Store Garments in 20 Seconds, Not 5 Minutes
+              Process Thrift Store Garments in 20 Seconds, Not 3 Minutes
             </h1>
 
             <p className="text-xl md:text-2xl mb-10 text-white/90 font-light">
-              AI-powered textile analysis for consignment stores. 30x faster than manual processing.
+              AI-powered textile analysis for consignment stores. 9x faster than manual processing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#pilot"
-                className="inline-block bg-white text-[#2C5F5D] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#F5F1E8] transition-colors shadow-lg hover:shadow-xl min-w-[240px] text-center"
+                className="inline-block bg-[#A67C52] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#8d6943] transition-all shadow-lg hover:shadow-2xl min-w-[240px] text-center distressed-border hover-lift"
+                style={{ borderColor: 'rgba(255,255,255,0.2)' }}
               >
                 Apply for Pilot Program
               </a>
               <a
-                href="#demo"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors min-w-[240px] text-center"
+                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all min-w-[240px] text-center hover-lift"
               >
                 Watch Demo
               </a>
@@ -74,17 +101,20 @@ export default function Home() {
               { title: 'Measurement Feature', desc: 'Pit-to-pit measurements in seconds' },
               { title: 'Pricing Intelligence', desc: 'Real-time market data integration' }
             ].map((video, i) => (
-              <div key={i} className="distressed-border rounded-lg overflow-hidden bg-gray-100 hover-lift">
-                <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-16 h-16 mx-auto mb-4 text-[#2C5F5D]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    <p className="text-gray-600 text-sm">Video Coming Soon</p>
+              <div key={i} className="distressed-border rounded-lg overflow-hidden bg-[#F5F1E8] hover-lift vintage-stamp">
+                <div className="aspect-video bg-gradient-to-br from-[#2C5F5D] to-[#234a48] flex items-center justify-center relative">
+                  <div className="absolute inset-0 opacity-10 canvas-texture"></div>
+                  <div className="text-center relative z-10">
+                    <div className="w-20 h-20 mx-auto mb-4 bg-[#A67C52] rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-white/80 text-sm font-semibold">Video Coming Soon</p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D]">{video.title}</h3>
+                <div className="p-6 bg-white">
+                  <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D] letterpress">{video.title}</h3>
                   <p className="text-gray-700">{video.desc}</p>
                 </div>
               </div>
@@ -102,13 +132,15 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { icon: '⏱️', title: 'Manual Tagging', desc: '5-10 minutes per garment draining productivity' },
-              { icon: '💸', title: 'Labor Costs', desc: '$937/month per employee wasted on repetitive tasks' },
+              { icon: '⏱️', title: 'Manual Tagging', desc: '3-5 minutes per garment draining productivity' },
+              { icon: '💸', title: 'Labor Costs', desc: 'Hundreds per month wasted on repetitive tasks' },
               { icon: '📉', title: 'Limited Capacity', desc: "Can't process enough inventory to scale" }
             ].map((problem, i) => (
-              <div key={i} className="text-center p-8 bg-white rounded-lg distressed-border hover-lift">
-                <div className="text-6xl mb-4">{problem.icon}</div>
-                <h3 className="text-3xl font-bold mb-4 text-[#2C5F5D]">{problem.title}</h3>
+              <div key={i} className="text-center p-8 bg-white rounded-lg distressed-border hover-lift vintage-stamp">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#2C5F5D] to-[#234a48] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="text-4xl">{problem.icon}</div>
+                </div>
+                <h3 className="text-3xl font-bold mb-4 text-[#2C5F5D] letterpress">{problem.title}</h3>
                 <p className="text-gray-700 text-lg">{problem.desc}</p>
               </div>
             ))}
@@ -132,13 +164,16 @@ export default function Home() {
               { icon: '⚧️', title: 'Gender Classification', desc: 'Multi-signal hierarchical analysis' },
               { icon: '📏', title: 'Smart Measurements', desc: 'Pit-to-pit when tags are missing' },
               { icon: '💰', title: 'Market Pricing', desc: 'Real-time eBay data + brand intelligence' },
-              { icon: '⚡', title: '20-Second Processing', desc: '30x faster than manual' },
+              { icon: '⚡', title: '20-Second Processing', desc: '9x faster than manual' },
               { icon: '📊', title: 'Learning System', desc: 'Improves from every correction' }
             ].map((feature, i) => (
-              <div key={i} className="p-6 bg-[#F5F1E8] rounded-lg distressed-border hover-lift">
-                <div className="text-4xl mb-3">{feature.icon}</div>
-                <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D]">{feature.title}</h3>
-                <p className="text-gray-700">{feature.desc}</p>
+              <div key={i} className="p-6 bg-[#F5F1E8] rounded-lg distressed-border hover-lift vintage-stamp relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#A67C52] opacity-5 rounded-full -mr-12 -mt-12 group-hover:opacity-10 transition-opacity"></div>
+                <div className="w-16 h-16 mb-4 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-[#A67C52]/20">
+                  <div className="text-3xl">{feature.icon}</div>
+                </div>
+                <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D] letterpress relative">{feature.title}</h3>
+                <p className="text-gray-700 relative">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -159,90 +194,16 @@ export default function Home() {
               { step: 3, title: 'Review results', desc: '95% accurate - edit if needed' },
               { step: 4, title: 'Save to inventory', desc: 'Export to POS or print label' }
             ].map((item, i) => (
-              <div key={i} className="flex gap-6 mb-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#A67C52] flex items-center justify-center text-3xl font-bold">
+              <div key={i} className="flex gap-6 mb-8 items-start group">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#A67C52] flex items-center justify-center text-3xl font-bold shadow-xl border-4 border-white/10 group-hover:scale-110 transition-transform">
                   {item.step}
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="text-3xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/80 text-lg">{item.desc}</p>
+                  <h3 className="text-3xl font-bold mb-2 letterpress">{item.title}</h3>
+                  <p className="text-white/90 text-lg">{item.desc}</p>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Calculator */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            Calculate Your Savings
-          </h2>
-
-          <div className="bg-[#F5F1E8] p-8 rounded-lg distressed-border">
-            <div className="space-y-8">
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Number of processing employees: {employees}
-                </label>
-                <input
-                  type="range"
-                  min="1"
-                  max="10"
-                  value={employees}
-                  onChange={(e) => setEmployees(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Hourly wage: ${wage}
-                </label>
-                <input
-                  type="range"
-                  min="15"
-                  max="30"
-                  value={wage}
-                  onChange={(e) => setWage(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Items processed per day: {itemsPerDay}
-                </label>
-                <input
-                  type="range"
-                  min="50"
-                  max="200"
-                  step="10"
-                  value={itemsPerDay}
-                  onChange={(e) => setItemsPerDay(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-            </div>
-
-            <div className="mt-12 p-8 bg-white rounded-lg border-2 border-[#2C5F5D]">
-              <div className="text-center mb-6">
-                <p className="text-2xl mb-4 text-gray-700">With TAGS, you save:</p>
-                <p className="text-6xl font-bold text-[#2C5F5D] mb-6">${monthlySavings.toFixed(0)}/month</p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 text-center">
-                <div>
-                  <p className="text-lg text-gray-600 mb-2">Additional Capacity</p>
-                  <p className="text-3xl font-bold text-[#A67C52]">{additionalCapacity} items/day</p>
-                </div>
-                <div>
-                  <p className="text-lg text-gray-600 mb-2">ROI Period</p>
-                  <p className="text-3xl font-bold text-[#A67C52]">{roiMonths.toFixed(1)} months</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -257,7 +218,7 @@ export default function Home() {
             First 10 stores get exclusive early access pricing
           </p>
 
-          <div className="max-w-md mx-auto bg-white rounded-lg p-8 distressed-border hover-lift" style={{
+          <div className="max-w-md mx-auto bg-white rounded-lg p-8 distressed-border hover-lift vintage-stamp shadow-2xl" style={{
             backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)',
           }}>
             <div className="text-center mb-6">
@@ -269,9 +230,7 @@ export default function Home() {
               {[
                 'FREE for 30 days',
                 '50% revenue share Mo 2-7',
-                'Full training + support',
-                'Lock in $99/mo forever',
-                <span key="normal" className="text-sm">(normally $199)</span>
+                'Full training + support'
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-2xl">✅</span>
@@ -313,7 +272,8 @@ export default function Home() {
 
               <button
                 type="submit"
-                className="w-full bg-[#2C5F5D] text-white py-4 rounded-lg font-bold text-xl hover:bg-[#234a48] transition-colors"
+                className="w-full bg-[#A67C52] text-white py-4 rounded-lg font-bold text-xl hover:bg-[#8d6943] transition-all shadow-lg hover:shadow-xl distressed-border hover-lift"
+                style={{ borderColor: 'rgba(255,255,255,0.2)' }}
               >
                 Apply Now
               </button>
@@ -326,7 +286,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl mb-6 text-[#2C5F5D] letterpress">
-            Pilot Programs Starting Q1 2025
+            Pilot Programs Starting Spring 2026
           </h2>
           <p className="text-xl text-gray-700 mb-8">
             Follow our journey on Instagram
@@ -349,19 +309,20 @@ export default function Home() {
       <section className="py-20 bg-[#2C5F5D] text-white canvas-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl mb-8 letterpress">
-            Ready to 30x Your Processing Speed?
+            Ready to 9x Your Processing Speed?
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="#pilot"
-              className="inline-block bg-white text-[#2C5F5D] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#F5F1E8] transition-colors shadow-lg min-w-[240px]"
+              className="inline-block bg-[#A67C52] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#8d6943] transition-all shadow-lg hover:shadow-2xl min-w-[240px] distressed-border hover-lift"
+              style={{ borderColor: 'rgba(255,255,255,0.2)' }}
             >
               Apply for Pilot Program
             </a>
             <a
               href="mailto:robert@tagstech.app"
-              className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors min-w-[240px]"
+              className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all min-w-[240px] hover-lift"
             >
               Schedule Demo Call
             </a>
@@ -376,15 +337,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1F2937] text-white py-12">
+      <footer className="bg-[#1F2937] text-white py-12 canvas-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <span className="text-2xl font-bold">TAGS</span>
+              <div className="mb-4">
+                <img
+                  src="/tags-logo-footer.png"
+                  alt="TAGS Logo"
+                  className="w-24 h-24"
+                />
               </div>
               <p className="text-white/70 text-sm">
                 Textile Analysis & Garment Scanning

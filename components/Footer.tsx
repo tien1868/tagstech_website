@@ -37,7 +37,7 @@ export default function Footer() {
             <h3 className="text-cream-50 font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#demo" className="text-cream-100/80 hover:text-teal-400 transition-colors">
+                <a href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt" target="_blank" rel="noopener noreferrer" className="text-cream-100/80 hover:text-teal-400 transition-colors">
                   Watch Demo
                 </a>
               </li>

@@ -24,7 +24,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: 'TAGS - AI Garment Processing | 9x Faster Than Manual',
   description: 'Automated textile analysis for thrift stores. Brand detection, measurements, pricing in 20 seconds. Save hundreds monthly. Pilot programs available.',
-  keywords: ['garment analysis', 'thrift store', 'AI', 'textile analysis', 'consignment', 'inventory management'],
+  keywords: ['garment analysis', 'thrift store', 'AI', 'textile analysis', 'second hand clothing stores', 'inventory management'],
   authors: [{ name: 'Tags Technologies LLC' }],
   openGraph: {
     title: 'TAGS - AI-Powered Garment Processing',

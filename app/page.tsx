@@ -65,7 +65,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-10 text-white/90 font-light">
-              AI-powered textile analysis for consignment stores. 9x faster than manual processing.
+              AI-powered textile analysis for second hand clothing stores. 9x faster than manual processing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -168,7 +168,7 @@ export default function Home() {
       <section className="py-20 bg-[#F5F1E8] canvas-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            The Bottleneck Killing Consignment Stores
+            The Bottleneck Killing Second Hand Clothing Stores
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

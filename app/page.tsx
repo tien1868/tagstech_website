@@ -101,8 +101,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative w-full max-w-3xl mx-auto distressed-border rounded-xl overflow-hidden shadow-2xl hover-lift vintage-stamp bg-white">
-            <div className="relative w-full" style={{ paddingTop: '177.78%' }}>
+          <div className="relative w-full max-w-md mx-auto distressed-border rounded-xl overflow-hidden shadow-2xl hover-lift vintage-stamp bg-white">
+            <div className="relative w-full" style={{ paddingTop: '177.78%', maxHeight: '600px' }}>
               <iframe
                 src="https://www.youtube.com/embed/So2ND4Sds3o"
                 className="absolute top-0 left-0 w-full h-full"

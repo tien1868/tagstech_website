@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { Inter, Bebas_Neue, Lora } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 });
 
-const bebasNeue = Bebas_Neue({ 
+const bebasNeue = Bebas_Neue({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-bebas',

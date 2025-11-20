@@ -7,13 +7,19 @@ export default function Home() {
   const [wage, setWage] = useState(15);
   const [itemsPerDay, setItemsPerDay] = useState(100);
 
-  // ROI Calculator logic
-  const timePerItem = 5; // minutes manual
+  // ROI Calculator logic - More realistic estimates
+  const timePerItem = 3; // minutes manual (realistic average)
   const timePerItemTAGS = 0.33; // 20 seconds
-  const timeSaved = (itemsPerDay * (timePerItem - timePerItemTAGS)) / 60; // hours per day
-  const monthlySavings = timeSaved * wage * 22 * employees;
-  const additionalCapacity = Math.floor(itemsPerDay * (timePerItem / timePerItemTAGS));
-  const roiMonths = (99 / monthlySavings) * 12;
+  const timeSavedPerItemMinutes = timePerItem - timePerItemTAGS; // ~2.67 min saved per item
+  const dailyTimeSavedHours = (itemsPerDay * timeSavedPerItemMinutes) / 60; // total hours saved per day
+
+  // Account for realistic utilization (60% of saved time = actual productive gain)
+  const utilizationFactor = 0.6;
+  const monthlySavings = Math.round(dailyTimeSavedHours * wage * 22 * employees * utilizationFactor);
+
+  // More realistic capacity increase: how many more items can be processed with saved time
+  const additionalCapacity = Math.floor((dailyTimeSavedHours * utilizationFactor * 60) / timePerItemTAGS);
+  const roiMonths = monthlySavings > 0 ? Number((99 / monthlySavings).toFixed(1)) : 99;
 
   return (
     <main className="min-h-screen">
@@ -36,11 +42,11 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 letterpress tracking-wide">
-              Process Thrift Store Garments in 20 Seconds, Not 5 Minutes
+              Process Thrift Store Garments in 20 Seconds, Not 3 Minutes
             </h1>
 
             <p className="text-xl md:text-2xl mb-10 text-white/90 font-light">
-              AI-powered textile analysis for consignment stores. 30x faster than manual processing.
+              AI-powered textile analysis for consignment stores. 9x faster than manual processing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -102,8 +108,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { icon: '⏱️', title: 'Manual Tagging', desc: '5-10 minutes per garment draining productivity' },
-              { icon: '💸', title: 'Labor Costs', desc: '$937/month per employee wasted on repetitive tasks' },
+              { icon: '⏱️', title: 'Manual Tagging', desc: '3-5 minutes per garment draining productivity' },
+              { icon: '💸', title: 'Labor Costs', desc: 'Hundreds per month wasted on repetitive tasks' },
               { icon: '📉', title: 'Limited Capacity', desc: "Can't process enough inventory to scale" }
             ].map((problem, i) => (
               <div key={i} className="text-center p-8 bg-white rounded-lg distressed-border hover-lift">
@@ -132,7 +138,7 @@ export default function Home() {
               { icon: '⚧️', title: 'Gender Classification', desc: 'Multi-signal hierarchical analysis' },
               { icon: '📏', title: 'Smart Measurements', desc: 'Pit-to-pit when tags are missing' },
               { icon: '💰', title: 'Market Pricing', desc: 'Real-time eBay data + brand intelligence' },
-              { icon: '⚡', title: '20-Second Processing', desc: '30x faster than manual' },
+              { icon: '⚡', title: '20-Second Processing', desc: '9x faster than manual' },
               { icon: '📊', title: 'Learning System', desc: 'Improves from every correction' }
             ].map((feature, i) => (
               <div key={i} className="p-6 bg-[#F5F1E8] rounded-lg distressed-border hover-lift">
@@ -349,7 +355,7 @@ export default function Home() {
       <section className="py-20 bg-[#2C5F5D] text-white canvas-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl mb-8 letterpress">
-            Ready to 30x Your Processing Speed?
+            Ready to 9x Your Processing Speed?
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

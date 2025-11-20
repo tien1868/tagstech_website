@@ -58,7 +58,9 @@ export default function Home() {
                 Apply for Pilot Program
               </a>
               <a
-                href="#demo"
+                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all min-w-[240px] text-center hover-lift"
               >
                 Watch Demo

@@ -24,7 +24,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-cream-100/80 max-w-md mb-4">
-              AI-powered garment processing for thrift stores and consignment shops. 
+              AI-powered garment processing for thrift stores and second hand clothing stores.
               Process garments 30x faster with 95% accuracy.
             </p>
             <p className="text-sm text-cream-100/60">

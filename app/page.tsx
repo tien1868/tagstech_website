@@ -1,5 +1,6 @@
 'use client';
 
+// Force rebuild for deployment cache clearing
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -22,7 +23,7 @@ export default function Home() {
             </a>
             <div className="flex items-center gap-6">
               <a
-                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                href="https://youtube.com/shorts/So2ND4Sds3o?si=myLIkKS0QYTUImUt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:inline-block text-white/90 hover:text-white font-semibold transition-colors"
@@ -64,7 +65,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl mb-10 text-white/90 font-light">
-              AI-powered textile analysis for consignment stores. 9x faster than manual processing.
+              AI-powered textile analysis for second hand clothing stores. 9x faster than manual processing.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -76,7 +77,7 @@ export default function Home() {
                 Apply for Pilot Program
               </a>
               <a
-                href="https://www.instagram.com/reel/DRLLa0hjl0W/?utm_source=ig_web_copy_link&igsh=Z2k2dDViamFnY2tt"
+                href="https://youtube.com/shorts/So2ND4Sds3o?si=myLIkKS0QYTUImUt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white/60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all min-w-[240px] text-center hover-lift"
@@ -84,6 +85,46 @@ export default function Home() {
                 Watch Demo
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Demo Video - Embedded */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-[#F5F1E8]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#2C5F5D] letterpress">
+              See TAGS In Action
+            </h2>
+            <p className="text-xl text-gray-700">
+              Watch how we process garments in 20 seconds
+            </p>
+          </div>
+
+          <div className="relative w-full max-w-md mx-auto distressed-border rounded-xl overflow-hidden shadow-2xl hover-lift vintage-stamp bg-white">
+            <div className="relative w-full" style={{ paddingTop: '177.78%', maxHeight: '600px' }}>
+              <iframe
+                src="https://www.youtube.com/embed/So2ND4Sds3o"
+                className="absolute top-0 left-0 w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://youtube.com/shorts/So2ND4Sds3o?si=myLIkKS0QYTUImUt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#2C5F5D] hover:text-[#A67C52] transition-colors font-semibold"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              View on YouTube
+            </a>
           </div>
         </div>
       </section>
@@ -127,7 +168,7 @@ export default function Home() {
       <section className="py-20 bg-[#F5F1E8] canvas-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            The Bottleneck Killing Consignment Stores
+            The Bottleneck Killing Second Hand Clothing Stores
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

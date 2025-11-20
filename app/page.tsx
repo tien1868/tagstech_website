@@ -1,5 +1,6 @@
 'use client';
 
+// Force rebuild for deployment cache clearing
 export default function Home() {
   return (
     <main className="min-h-screen">

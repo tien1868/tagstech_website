@@ -1,26 +1,4 @@
-'use client';
-
-import { useState } from 'react';
-
 export default function Home() {
-  const [employees, setEmployees] = useState(2);
-  const [wage, setWage] = useState(15);
-  const [itemsPerDay, setItemsPerDay] = useState(100);
-
-  // ROI Calculator logic - More realistic estimates
-  const timePerItem = 3; // minutes manual (realistic average)
-  const timePerItemTAGS = 0.33; // 20 seconds
-  const timeSavedPerItemMinutes = timePerItem - timePerItemTAGS; // ~2.67 min saved per item
-  const dailyTimeSavedHours = (itemsPerDay * timeSavedPerItemMinutes) / 60; // total hours saved per day
-
-  // Account for realistic utilization (60% of saved time = actual productive gain)
-  const utilizationFactor = 0.6;
-  const monthlySavings = Math.round(dailyTimeSavedHours * wage * 22 * employees * utilizationFactor);
-
-  // More realistic capacity increase: how many more items can be processed with saved time
-  const additionalCapacity = Math.floor((dailyTimeSavedHours * utilizationFactor * 60) / timePerItemTAGS);
-  const roiMonths = monthlySavings > 0 ? Number((99 / monthlySavings).toFixed(1)) : 99;
-
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -190,83 +168,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ROI Calculator */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            Calculate Your Savings
-          </h2>
-
-          <div className="bg-[#F5F1E8] p-8 rounded-lg distressed-border vintage-stamp">
-            <div className="space-y-8">
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Number of processing employees: {employees}
-                </label>
-                <input
-                  type="range"
-                  min="1"
-                  max="10"
-                  value={employees}
-                  onChange={(e) => setEmployees(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Hourly wage: ${wage}
-                </label>
-                <input
-                  type="range"
-                  min="15"
-                  max="30"
-                  value={wage}
-                  onChange={(e) => setWage(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xl font-bold mb-3 text-[#2C5F5D]">
-                  Items processed per day: {itemsPerDay}
-                </label>
-                <input
-                  type="range"
-                  min="50"
-                  max="200"
-                  step="10"
-                  value={itemsPerDay}
-                  onChange={(e) => setItemsPerDay(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                />
-              </div>
-            </div>
-
-            <div className="mt-12 p-8 bg-white rounded-lg distressed-border vintage-stamp shadow-xl">
-              <div className="text-center mb-6">
-                <p className="text-2xl mb-4 text-gray-700 font-semibold">With TAGS, you save:</p>
-                <div className="inline-block px-8 py-4 bg-gradient-to-br from-[#2C5F5D] to-[#234a48] rounded-lg shadow-lg">
-                  <p className="text-6xl font-bold text-white letterpress mb-2">${monthlySavings.toFixed(0)}</p>
-                  <p className="text-xl text-white/80">per month</p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 text-center mt-8">
-                <div className="p-4 bg-[#F5F1E8] rounded-lg border-2 border-[#A67C52]/20">
-                  <p className="text-lg text-gray-600 mb-2 font-semibold">Additional Capacity</p>
-                  <p className="text-3xl font-bold text-[#A67C52] letterpress">{additionalCapacity} items/day</p>
-                </div>
-                <div className="p-4 bg-[#F5F1E8] rounded-lg border-2 border-[#A67C52]/20">
-                  <p className="text-lg text-gray-600 mb-2 font-semibold">ROI Period</p>
-                  <p className="text-3xl font-bold text-[#A67C52] letterpress">{roiMonths.toFixed(1)} months</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pilot Program */}
       <section id="pilot" className="py-20 bg-[#F5F1E8] canvas-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -289,9 +190,7 @@ export default function Home() {
               {[
                 'FREE for 30 days',
                 '50% revenue share Mo 2-7',
-                'Full training + support',
-                'Lock in $99/mo forever',
-                <span key="normal" className="text-sm">(normally $199)</span>
+                'Full training + support'
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-2xl">✅</span>

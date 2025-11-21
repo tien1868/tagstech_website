@@ -7,18 +7,23 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <Image 
-              src="/tags-logo-header.png" 
-              alt="TAGS Logo" 
-              width={60} 
-              height={60}
-              className="w-12 h-12 sm:w-14 sm:h-14"
-              priority
-            />
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-amber-700/10 rounded-full blur-md group-hover:blur-lg transition-all"></div>
+              <div className="relative bg-gradient-to-br from-white to-cream-50 rounded-full p-1.5 ring-2 ring-teal-600/20 group-hover:ring-teal-600/40 transition-all shadow-lg">
+                <Image
+                  src="/tags-logo-header.png"
+                  alt="TAGS Logo"
+                  width={60}
+                  height={60}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                  priority
+                />
+              </div>
+            </div>
             <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-teal-600">TAGS</div>
-              <div className="text-xs text-brown-500 font-semibold -mt-1">
+              <div className="text-2xl font-bold text-teal-600 letterpress tracking-wide">TAGS</div>
+              <div className="text-xs text-amber-700 font-semibold -mt-1 tracking-wider">
                 TEXTILE ANALYSIS
               </div>
             </div>

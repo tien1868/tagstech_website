@@ -9,20 +9,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <a href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-[#A67C52]/20 rounded-full blur-lg group-hover:blur-xl transition-all"></div>
-                <div className="relative bg-gradient-to-br from-white/95 to-[#F5F1E8] rounded-full p-2 ring-2 ring-[#A67C52]/40 group-hover:ring-[#A67C52]/60 transition-all shadow-xl">
-                  <img
-                    src="/tags-logo-header.png"
-                    alt="TAGS Logo"
-                    className="w-11 h-11 rounded-full"
-                  />
-                </div>
-              </div>
+              <img
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                className="w-14 h-14 drop-shadow-lg group-hover:scale-105 transition-all"
+                style={{
+                  filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 12px rgba(166, 124, 82, 0.25))'
+                }}
+              />
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-white letterpress">TAGS</div>
-                <div className="text-xs text-[#A67C52] font-semibold tracking-wide">
-                  TEXTILE ANALYSIS & GARMENT SCANNING
+                <div className="text-xs text-[#A67C52] font-semibold tracking-wide uppercase">
+                  Textile Analysis & Garment Scanning
                 </div>
               </div>
             </a>
@@ -57,17 +55,19 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-8 inline-block vintage-stamp relative group">
-              <div className="absolute inset-0 bg-[#A67C52]/30 rounded-full blur-2xl group-hover:blur-3xl transition-all"></div>
-              <div className="relative bg-gradient-to-br from-[#F5F1E8] via-white to-[#F5F1E8] rounded-full p-6 md:p-8 distressed-border shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#A67C52]/5 to-transparent"></div>
-                <img
-                  src="/tags-logo-header.png"
-                  alt="TAGS Logo"
-                  className="w-24 h-24 md:w-32 md:h-32 mx-auto relative z-10 drop-shadow-lg"
-                />
-                <div className="absolute -inset-1 bg-gradient-to-br from-[#A67C52]/20 via-transparent to-[#2C5F5D]/20 rounded-full blur-sm opacity-50"></div>
-              </div>
+            <div className="mb-8 inline-block relative group">
+              {/* Subtle glow backdrop */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#A67C52]/20 via-transparent to-[#F5F1E8]/20 blur-3xl scale-150 group-hover:scale-175 transition-all duration-500"></div>
+
+              {/* Logo with embossed effect */}
+              <img
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto relative transform group-hover:scale-105 transition-all duration-500"
+                style={{
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 24px rgba(166, 124, 82, 0.3)) drop-shadow(0 -2px 8px rgba(255, 255, 255, 0.1))'
+                }}
+              />
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 letterpress tracking-wide">

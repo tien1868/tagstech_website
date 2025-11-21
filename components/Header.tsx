@@ -7,19 +7,24 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <Image 
-              src="/tags-logo-header.png" 
-              alt="TAGS Logo" 
-              width={60} 
-              height={60}
-              className="w-12 h-12 sm:w-14 sm:h-14"
-              priority
-            />
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <Image
+                src="/tags-logo-header.png"
+                alt="TAGS Logo"
+                width={60}
+                height={60}
+                className="w-12 h-12 sm:w-14 sm:h-14 drop-shadow-md group-hover:drop-shadow-lg transition-all group-hover:scale-105"
+                style={{
+                  filter: 'drop-shadow(0 2px 4px rgba(44, 95, 93, 0.2)) drop-shadow(0 0 8px rgba(166, 124, 82, 0.15))'
+                }}
+                priority
+              />
+            </div>
             <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-teal-600">TAGS</div>
-              <div className="text-xs text-brown-500 font-semibold -mt-1">
-                TEXTILE ANALYSIS
+              <div className="text-2xl font-bold text-teal-600 letterpress tracking-wide">TAGS</div>
+              <div className="text-xs text-amber-700 font-semibold -mt-1 tracking-wider uppercase">
+                Textile Analysis
               </div>
             </div>
           </Link>

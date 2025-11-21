@@ -12,12 +12,15 @@ export default function Home() {
               <img
                 src="/tags-logo-header.png"
                 alt="TAGS Logo"
-                className="w-14 h-14 drop-shadow-lg group-hover:scale-105 transition-transform"
+                className="w-14 h-14 drop-shadow-lg group-hover:scale-105 transition-all"
+                style={{
+                  filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 12px rgba(166, 124, 82, 0.25))'
+                }}
               />
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-white letterpress">TAGS</div>
-                <div className="text-xs text-[#A67C52] font-semibold tracking-wide">
-                  TEXTILE ANALYSIS & GARMENT SCANNING
+                <div className="text-xs text-[#A67C52] font-semibold tracking-wide uppercase">
+                  Textile Analysis & Garment Scanning
                 </div>
               </div>
             </a>
@@ -52,11 +55,18 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-8 inline-block vintage-stamp">
+            <div className="mb-8 inline-block relative group">
+              {/* Subtle glow backdrop */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#A67C52]/20 via-transparent to-[#F5F1E8]/20 blur-3xl scale-150 group-hover:scale-175 transition-all duration-500"></div>
+
+              {/* Logo with embossed effect */}
               <img
                 src="/tags-logo-header.png"
                 alt="TAGS Logo"
-                className="w-32 h-32 md:w-40 md:h-40 mx-auto drop-shadow-2xl"
+                className="w-32 h-32 md:w-40 md:h-40 mx-auto relative transform group-hover:scale-105 transition-all duration-500"
+                style={{
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 24px rgba(166, 124, 82, 0.3)) drop-shadow(0 -2px 8px rgba(255, 255, 255, 0.1))'
+                }}
               />
             </div>
 
@@ -90,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* Featured Demo Video - Embedded */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-[#F5F1E8]">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-[#F5F1E8] canvas-texture">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#2C5F5D] letterpress">
@@ -101,15 +111,45 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative w-full max-w-md mx-auto distressed-border rounded-xl overflow-hidden shadow-2xl hover-lift vintage-stamp bg-white">
-            <div className="relative w-full" style={{ paddingTop: '177.78%', maxHeight: '600px' }}>
-              <iframe
-                src="https://www.youtube.com/embed/So2ND4Sds3o"
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+          <div className="relative w-full max-w-md mx-auto group">
+            {/* Vintage Film Frame Effect */}
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#2C5F5D] via-[#1F2937] to-[#A67C52] rounded-2xl opacity-80 blur-sm"></div>
+            <div className="relative bg-[#1F2937] rounded-xl p-3 shadow-2xl">
+              {/* Film Perforations */}
+              <div className="absolute -left-2 top-0 bottom-0 w-4 flex flex-col justify-around">
+                {[...Array(12)].map((_, i) => (
+                  <div key={i} className="w-2 h-2 bg-[#F5F1E8] rounded-sm opacity-60"></div>
+                ))}
+              </div>
+              <div className="absolute -right-2 top-0 bottom-0 w-4 flex flex-col justify-around">
+                {[...Array(12)].map((_, i) => (
+                  <div key={i} className="w-2 h-2 bg-[#F5F1E8] rounded-sm opacity-60"></div>
+                ))}
+              </div>
+
+              {/* Video Container */}
+              <div className="relative distressed-border rounded-lg overflow-hidden bg-black shadow-inner">
+                {/* Vintage Label */}
+                <div className="absolute top-2 left-2 z-10 bg-[#A67C52] text-white px-3 py-1 rounded text-xs font-bold tracking-wider shadow-lg distressed-border opacity-90">
+                  LIVE DEMO
+                </div>
+
+                <div className="relative w-full" style={{ paddingTop: '177.78%', maxHeight: '600px' }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/So2ND4Sds3o"
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              {/* Film Reel Bottom */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="w-8 h-8 rounded-full bg-[#A67C52] border-2 border-[#F5F1E8] shadow-lg"></div>
+                <div className="w-8 h-8 rounded-full bg-[#A67C52] border-2 border-[#F5F1E8] shadow-lg"></div>
+              </div>
             </div>
           </div>
 

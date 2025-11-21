@@ -71,7 +71,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 letterpress tracking-wide">
-              Process Thrift Store Garments in 20 Seconds, Not 3 Minutes
+              Process Garments in 20 Seconds, Not 3 Minutes
             </h1>
 
             <p className="text-xl md:text-2xl mb-10 text-white/90 font-light">
@@ -170,8 +170,15 @@ export default function Home() {
       </section>
 
       {/* Demo Video Section */}
-      <section id="demo" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="demo" className="py-20 bg-white relative overflow-hidden">
+        {/* Corner logo accents */}
+        <div className="absolute top-10 right-10 w-32 h-32 opacity-[0.02] pointer-events-none rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="absolute bottom-10 left-10 w-32 h-32 opacity-[0.02] pointer-events-none -rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
             See TAGS In Action
           </h2>
@@ -205,8 +212,12 @@ export default function Home() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-[#F5F1E8] canvas-texture">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-[#F5F1E8] canvas-texture relative overflow-hidden">
+        {/* Subtle logo watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] pointer-events-none">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
             The Bottleneck Killing Second Hand Clothing Stores
           </h2>
@@ -230,8 +241,16 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Decorative logo accent - top right */}
+        <div className="absolute -top-12 -right-12 w-64 h-64 opacity-[0.02] pointer-events-none rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        {/* Decorative logo accent - bottom left */}
+        <div className="absolute -bottom-12 -left-12 w-64 h-64 opacity-[0.02] pointer-events-none -rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-6 text-[#2C5F5D] letterpress">
             TAGS: Intelligence That Pays For Itself
           </h2>
@@ -262,8 +281,12 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-[#2C5F5D] text-white canvas-texture">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-[#2C5F5D] text-white canvas-texture relative overflow-hidden">
+        {/* Logo watermark with brand color tint */}
+        <div className="absolute top-1/4 right-12 w-80 h-80 opacity-[0.03] pointer-events-none">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" style={{ filter: 'brightness(1.2)' }} />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-16 letterpress">
             How It Works
           </h2>
@@ -290,8 +313,20 @@ export default function Home() {
       </section>
 
       {/* Pilot Program */}
-      <section id="pilot" className="py-20 bg-[#F5F1E8] canvas-texture">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="pilot" className="py-20 bg-[#F5F1E8] canvas-texture relative overflow-hidden">
+        {/* Subtle background logo pattern */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
+          <div className="absolute top-10 left-10 w-32 h-32">
+            <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+          </div>
+          <div className="absolute top-20 right-20 w-24 h-24 rotate-45">
+            <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+          </div>
+          <div className="absolute bottom-32 left-1/4 w-40 h-40 -rotate-12">
+            <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-6 text-[#2C5F5D] letterpress">
             Limited Pilot Spots Available
           </h2>
@@ -364,8 +399,12 @@ export default function Home() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Centered logo watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 opacity-[0.02] pointer-events-none">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl mb-6 text-[#2C5F5D] letterpress">
             Pilot Programs Starting Spring 2026
           </h2>
@@ -387,8 +426,15 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-[#2C5F5D] text-white canvas-texture">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-[#2C5F5D] text-white canvas-texture relative overflow-hidden">
+        {/* Subtle logo background pattern */}
+        <div className="absolute top-10 left-10 w-48 h-48 opacity-[0.02] pointer-events-none -rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3)' }} />
+        </div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 opacity-[0.02] pointer-events-none rotate-12">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3)' }} />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-5xl md:text-6xl mb-8 letterpress">
             Ready to 9x Your Processing Speed?
           </h2>
@@ -418,18 +464,26 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1F2937] text-white py-12 canvas-texture">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-[#1F2937] text-white py-12 canvas-texture relative overflow-hidden">
+        {/* Large background logo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.015] pointer-events-none">
+          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" style={{ filter: 'brightness(1.2)' }} />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="mb-4">
+              <div className="mb-4 relative group">
+                <div className="absolute inset-0 bg-[#A67C52]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <img
                   src="/tags-logo-footer.png"
                   alt="TAGS Logo"
-                  className="w-24 h-24"
+                  className="w-24 h-24 relative drop-shadow-lg group-hover:scale-105 transition-transform"
+                  style={{
+                    filter: 'drop-shadow(0 4px 8px rgba(166, 124, 82, 0.3))'
+                  }}
                 />
               </div>
-              <p className="text-white/70 text-sm">
+              <p className="text-white/70 text-sm font-semibold tracking-wide">
                 Textile Analysis & Garment Scanning
               </p>
             </div>

@@ -194,18 +194,29 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Pricing Intelligence - Coming Soon */}
+            {/* Pricing Intelligence - Embedded */}
             <div className="distressed-border rounded-lg overflow-hidden bg-[#F5F1E8] hover-lift vintage-stamp">
-              <div className="aspect-video bg-gradient-to-br from-[#2C5F5D] to-[#234a48] flex items-center justify-center relative min-h-[400px]">
-                <div className="absolute inset-0 opacity-10 canvas-texture"></div>
-                <div className="text-center relative z-10">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-[#A67C52] rounded-full flex items-center justify-center shadow-lg">
-                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-white/80 text-sm font-semibold">Video Coming Soon</p>
-                </div>
+              <div className="bg-gradient-to-br from-[#2C5F5D] to-[#234a48] p-4 flex items-center justify-center min-h-[400px]">
+                <blockquote 
+                  className="instagram-media" 
+                  data-instgrm-permalink="https://www.instagram.com/reel/DRLLa0hjl0W/"
+                  data-instgrm-version="14"
+                  style={{ 
+                    background: '#FFF', 
+                    border: 0, 
+                    borderRadius: '12px', 
+                    boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)',
+                    margin: '0 auto',
+                    maxWidth: '100%',
+                    minWidth: '280px',
+                    padding: 0,
+                    width: '100%'
+                  }}
+                >
+                  <a href="https://www.instagram.com/reel/DRLLa0hjl0W/" target="_blank" rel="noopener noreferrer">
+                    View on Instagram
+                  </a>
+                </blockquote>
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D] letterpress">Pricing Intelligence</h3>

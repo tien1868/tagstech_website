@@ -185,10 +185,11 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Full Analysis Demo', desc: 'Complete workflow from scan to save' },
-              { title: 'Measurement Feature', desc: 'Pit-to-pit measurements in seconds' },
-              { title: 'Pricing Intelligence', desc: 'Real-time market data integration' }
-            ].map((video, i) => (
+              {[
+          { title: 'Full Analysis Demo', desc: 'Complete workflow from scan to save' },
+          { title: 'Measurement Feature', desc: 'Pit-to-pit measurements in seconds' },
+          { title: 'Pricing Intelligence', desc: 'Real-time market data integration' }
+        ].map((video, i) => (
               <div key={i} className="distressed-border rounded-lg overflow-hidden bg-[#F5F1E8] hover-lift vintage-stamp">
                 <div className="aspect-video bg-gradient-to-br from-[#2C5F5D] to-[#234a48] flex items-center justify-center relative">
                   <div className="absolute inset-0 opacity-10 canvas-texture"></div>

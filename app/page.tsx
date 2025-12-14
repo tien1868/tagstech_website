@@ -1,6 +1,6 @@
 'use client';
 
-// Force rebuild for deployment cache clearing - v2.0
+// Force rebuild for deployment cache clearing - v3.0
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -313,55 +313,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Demo Video Section */}
-      <section id="demo" className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-32 h-32 opacity-[0.02] pointer-events-none rotate-12">
-          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="absolute bottom-10 left-10 w-32 h-32 opacity-[0.02] pointer-events-none -rotate-12">
-          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            More Features Coming Soon
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Full Analysis Demo', desc: 'Complete workflow from scan to save' },
-              { title: 'Measurement Feature', desc: 'Pit-to-pit measurements in seconds' },
-              { title: 'Pricing Intelligence', desc: 'Real-time market data integration' }
-            ].map((video, i) => (
-              <div key={i} className="distressed-border rounded-lg overflow-hidden bg-[#F5F1E8] hover-lift vintage-stamp">
-                <div className="aspect-video bg-gradient-to-br from-[#2C5F5D] to-[#234a48] flex items-center justify-center relative">
-                  <div className="absolute inset-0 opacity-10 canvas-texture"></div>
-                  <div className="text-center relative z-10">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-[#A67C52] rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <p className="text-white/80 text-sm font-semibold">Video Coming Soon</p>
-                  </div>
-                </div>
-                <div className="p-6 bg-white">
-                  <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D] letterpress">{video.title}</h3>
-                  <p className="text-gray-700">{video.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Problem Section */}
-      <section className="py-20 bg-[#F5F1E8] canvas-texture relative overflow-hidden">
+      <section className="py-20 bg-white canvas-texture relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] pointer-events-none">
           <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-5xl md:text-6xl text-center mb-16 text-[#2C5F5D] letterpress">
-            The Bottleneck Killing Second Hand Clothing Stores
+            The Bottleneck Killing Resale Stores
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -370,7 +329,7 @@ export default function Home() {
               { icon: '💸', title: 'Labor Costs', desc: 'Hundreds per month wasted on repetitive tasks' },
               { icon: '📉', title: 'Limited Capacity', desc: "Can't process enough inventory to scale" }
             ].map((problem, i) => (
-              <div key={i} className="text-center p-8 bg-white rounded-lg distressed-border hover-lift vintage-stamp">
+              <div key={i} className="text-center p-8 bg-[#F5F1E8] rounded-lg distressed-border hover-lift vintage-stamp">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#2C5F5D] to-[#234a48] rounded-full flex items-center justify-center shadow-lg">
                   <div className="text-4xl">{problem.icon}</div>
                 </div>
@@ -383,7 +342,7 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-[#F5F1E8] relative overflow-hidden">
         <div className="absolute -top-12 -right-12 w-64 h-64 opacity-[0.02] pointer-events-none rotate-12">
           <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
         </div>
@@ -401,15 +360,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: '🏷️', title: 'Brand Detection', desc: '95% accuracy on 10,000+ brands' },
-              { icon: '⚧️', title: 'Gender Classification', desc: 'Multi-signal hierarchical analysis' },
-              { icon: '📏', title: 'Smart Measurements', desc: 'Pit-to-pit when tags are missing' },
-              { icon: '💰', title: 'Market Pricing', desc: 'Real-time eBay data + brand intelligence' },
-              { icon: '⚡', title: '20-Second Processing', desc: '9x faster than manual' },
+              { icon: '👔', title: 'Smart Classification', desc: 'Gender, category & style detection' },
+              { icon: '📏', title: 'Measurements', desc: 'Pit-to-pit when tags are missing' },
+              { icon: '💰', title: 'Market Pricing', desc: 'Real-time eBay data integration' },
+              { icon: '⚡', title: '20-Second Processing', desc: '9x faster than manual entry' },
               { icon: '📊', title: 'Learning System', desc: 'Improves from every correction' }
             ].map((feature, i) => (
-              <div key={i} className="p-6 bg-[#F5F1E8] rounded-lg distressed-border hover-lift vintage-stamp relative overflow-hidden group">
+              <div key={i} className="p-6 bg-white rounded-lg distressed-border hover-lift vintage-stamp relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#A67C52] opacity-5 rounded-full -mr-12 -mt-12 group-hover:opacity-10 transition-opacity"></div>
-                <div className="w-16 h-16 mb-4 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-[#A67C52]/20">
+                <div className="w-16 h-16 mb-4 bg-[#F5F1E8] rounded-full flex items-center justify-center shadow-md border-2 border-[#A67C52]/20">
                   <div className="text-3xl">{feature.icon}</div>
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-[#2C5F5D] letterpress relative">{feature.title}</h3>
@@ -452,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Pilot Program */}
-      <section id="pilot" className="py-20 bg-[#F5F1E8] canvas-texture relative overflow-hidden">
+      <section id="pilot" className="py-20 bg-white canvas-texture relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
           <div className="absolute top-10 left-10 w-32 h-32">
             <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
@@ -472,9 +431,7 @@ export default function Home() {
             First 10 stores get exclusive early access pricing
           </p>
 
-          <div className="max-w-md mx-auto bg-white rounded-lg p-8 distressed-border hover-lift vintage-stamp shadow-2xl" style={{
-            backgroundImage: 'linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)',
-          }}>
+          <div className="max-w-md mx-auto bg-[#F5F1E8] rounded-lg p-8 distressed-border hover-lift vintage-stamp shadow-2xl">
             <div className="text-center mb-6">
               <h3 className="text-4xl font-bold mb-2 text-[#2C5F5D]">PILOT PROGRAM</h3>
               <p className="text-xl text-gray-600">(First 10 Stores)</p>
@@ -498,30 +455,30 @@ export default function Home() {
                 type="text"
                 placeholder="Store Name"
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none bg-white"
               />
               <input
                 type="text"
                 placeholder="Location (City, State)"
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none bg-white"
               />
               <input
                 type="number"
                 placeholder="Current Monthly Volume"
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none bg-white"
               />
               <input
                 type="email"
                 placeholder="Contact Email"
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none bg-white"
               />
               <input
                 type="tel"
                 placeholder="Phone (optional)"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-[#2C5F5D] focus:outline-none bg-white"
               />
 
               <button
@@ -536,32 +493,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 opacity-[0.02] pointer-events-none">
-          <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-4xl md:text-5xl mb-6 text-[#2C5F5D] letterpress">
-            Pilot Programs Starting Spring 2026
-          </h2>
-          <p className="text-xl text-gray-700 mb-8">
-            Follow our journey on Instagram
-          </p>
-          <a
-            href="https://instagram.com/tagstech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#2C5F5D] text-2xl font-bold hover:text-[#A67C52] transition-colors"
-          >
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @tagstech
-          </a>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-20 bg-[#2C5F5D] text-white canvas-texture relative overflow-hidden">
         <div className="absolute top-10 left-10 w-48 h-48 opacity-[0.02] pointer-events-none -rotate-12">
@@ -571,9 +502,12 @@ export default function Home() {
           <img src="/tags-logo-header.png" alt="" className="w-full h-full object-contain" style={{ filter: 'brightness(1.3)' }} />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-5xl md:text-6xl mb-8 letterpress">
+          <h2 className="text-5xl md:text-6xl mb-4 letterpress">
             Ready to 9x Your Processing Speed?
           </h2>
+          <p className="text-xl text-white/80 mb-8">
+            Pilot programs launching Q1 2026
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
